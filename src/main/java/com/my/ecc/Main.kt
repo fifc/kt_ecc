@@ -1,6 +1,7 @@
 package com.my.ecc
 
 import java.io.File
+import java.lang.Thread.sleep
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 
@@ -26,6 +27,7 @@ object Main {
         expire = LocalDateTime.now().plusDays(60).plusHours(2).toEpochSecond(ZoneOffset.UTC)
         data = Ecc.encryptString("{ id: 105, expire: $expire, name: ultimate_edition, user: north star }")
         println("60d: $data")
+        sleep(10000)
     }
 }
 
