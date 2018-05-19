@@ -27,7 +27,7 @@ object Main {
         expire = LocalDateTime.now().plusDays(60).plusHours(2).toEpochSecond(ZoneOffset.UTC)
         data = Ecc.encryptString("{ id: 105, expire: $expire, name: ultimate_edition, user: north star }")
         println("60d: $data")
-        sleep(10000)
+        //sleep(10000)
     }
 }
 
