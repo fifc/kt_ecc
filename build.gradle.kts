@@ -1,11 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val gradle_version = "6.6-rc-6"
+val gradle_version = "6.6"
 
 buildscript {
 	extra.apply {
 		set("kotlinVersion", "1.4.0-rc")
-		//set("kotlinVersion", "1.3.72")
 	}
 	repositories {
 		mavenCentral()
@@ -30,7 +29,7 @@ java.sourceCompatibility = JavaVersion.VERSION_14
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "13"
+		jvmTarget = "14"
 	}
 }
 
