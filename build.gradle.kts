@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val gradle_version = "6.7-rc-1"
+val gradle_version = "6.7-rc-2"
 
 buildscript {
 	extra.apply {
@@ -24,7 +24,7 @@ plugins {
 
 group = "com.my"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_14
+java.sourceCompatibility = JavaVersion.VERSION_15
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
