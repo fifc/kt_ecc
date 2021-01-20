@@ -4,12 +4,13 @@ val gradle_version = "6.8"
 
 buildscript {
 	extra.apply {
-		set("kotlinVersion", "1.4.21")
+		set("kotlinVersion", "1.4.30-RC")
 	}
 	repositories {
 		mavenCentral()
 		maven { url = uri("https://repo.spring.io/snapshot") }
 		maven { url = uri("https://repo.spring.io/milestone") }
+		maven ("https://dl.bintray.com/kotlin/kotlin-eap")
 	}
 	dependencies {
 		classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:${property("kotlinVersion")}")
@@ -37,6 +38,7 @@ repositories {
 	mavenCentral()
 	maven { url = uri("https://repo.spring.io/snapshot") }
 	maven { url = uri("https://repo.spring.io/milestone") }
+	maven ("https://dl.bintray.com/kotlin/kotlin-eap")
 }
 
 dependencies {
