@@ -4,7 +4,7 @@ val gradle_version = "7.0"
 
 buildscript {
 	extra.apply {
-		set("kotlinVersion", "1.5.0-M2")
+		set("kotlinVersion", "1.5.0-RC")
 	}
 	repositories {
 		mavenCentral()
@@ -25,12 +25,12 @@ plugins {
 
 group = "com.my"
 version = "0.0.1-SNAPSHOT"
-java.sourceCompatibility = JavaVersion.VERSION_15
+java.sourceCompatibility = JavaVersion.VERSION_16
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "15"
+		jvmTarget = "16"
 	}
 }
 
