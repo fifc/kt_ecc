@@ -1,4 +1,4 @@
-package com.my.ecc
+package com.y.ecc
 
 import java.io.File
 import java.lang.Thread.sleep
@@ -27,6 +27,7 @@ object Main {
         expire = LocalDateTime.now().plusDays(60).plusHours(2).toEpochSecond(ZoneOffset.UTC)
         data = Ecc.encryptString("{ id: 105, expire: $expire, name: ultimate_edition, user: north star }")
         println("60d: $data")
+	BLAKE3.testBLAKE3()
         //sleep(10000)
     }
 }

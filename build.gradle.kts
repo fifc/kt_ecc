@@ -1,6 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-val gradle_version = "7.0.1"
+val gradle_version = "7.0.2"
 
 buildscript {
 	extra.apply {
@@ -47,10 +47,11 @@ dependencies {
 	implementation("org.bouncycastle:bcpkix-jdk15on:+")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("io.lktk:blake3jni:0.2.2")
 }
 
 defaultTasks = listOf("run")
-application.mainClassName = "com.my.ecc.MainKt"
+application.mainClassName = "com.y.ecc.Main"
 
 tasks.wrapper {
     gradleVersion = gradle_version

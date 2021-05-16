@@ -1,4 +1,4 @@
-package com.my.ecc
+package com.y.ecc
 
 import java.io.IOException
 import java.io.StringReader
